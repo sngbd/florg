@@ -2,7 +2,7 @@
 A simple shell script that organizes files with specific extension in download directory (default) by moving them to respective directories.
 
 ## Demo
-[YouTube](https://youtu.be/CV0mgjU2e_A)
+![img](demo.gif)
 
 ## Setup
 1. `git clone https://github.com/gilberdisinaga/florg.git`
