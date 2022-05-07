@@ -1,9 +1,6 @@
 # florg
 A simple shell script that organizes files with specific extension in download directory (default) by moving them to respective directories.
 
-## Demo
-![img](demo.gif)
-
 ## Setup
 1. `git clone https://github.com/gilberdisinaga/florg.git`
 2. Edit `config` contents (home directory, paths, file extensions, etc) to suit your machine and needs
