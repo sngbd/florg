@@ -1,21 +1,19 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 source config
 
 index=0;
 for fl in "${Files[@]}"
 do
-	exts=(${!fl})
-	for ext in "${exts[@]}"
-	do
-		lines=$(find $dldir -maxdepth 1 -type f -name "*.$ext" | wc -l)
-		if [[ $lines != 0 ]]
-		then
-			echo "Moved" \
-			`find $dldir -maxdepth 1 -type f -name "*.$ext" -print \
-				-exec mv {} ${!Directories[$index]} \;` \
-			`echo "to ${!Directories[$index]}"`
-		fi
-	done
-	index=$[index + 1];
+    exts=(${!fl})
+    for ext in "${exts[@]}"
+    do
+        lines=$(find $dldir -maxdepth 1 -type f -name "*.$ext" | wc -l)
+        if [[ $lines != 0 ]]
+        then
+            find $dldir -maxdepth 1 -type f -name "*.$ext" \
+                -exec mv -v {} ${!Directories[$index]} \;
+        fi
+    done
+    index=$[index + 1];
 done

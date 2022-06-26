@@ -1,23 +1,20 @@
-# Home directory
-HOME="/home/gbd"
-
 # Download directory
 dldir="$HOME/Downloads"
 
 # File directories
-arcdir="$HOME/Archives"
-picdir="$HOME/Pictures"
-vidir="$HOME/Videos"
-docdir="$HOME/Documents"
-audir="$HOME/Audios"
+arcdir=$dldir/Archives
+picdir=$dldir/Pictures
+vidir=$dldir/Videos
+docdir=$dldir/Documents
+audir=$dldir/Audio
 
 # File extensions
-Archives="rar zip tar.gz"
-Pictures="png jpg webp"
-Videos="mp4 mkv webm"
-Documents="pdf epub docx"
-Audios="mp3 flac m4a"
+Archives="rar zip tar.gz 7z pkg"
+Pictures="png jpg jpeg gif webp"
+Videos="mp4 mkv webm m4v avi"
+Documents="pdf epub docx djvu pptx"
+Audio="mp3 flac m4a wav aac"
 
 # Array of files and directories
-Files=(Archives Pictures Videos Documents Audios)
+Files=(Archives Pictures Videos Documents Audio)
 Directories=(arcdir picdir vidir docdir audir)
